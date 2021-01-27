@@ -26,7 +26,7 @@ jobs:
       #- name: Test
         #run: dotnet test --no-build --verbosity normal
       
-      - run: mkdir -p artifact #path to artifact
+      - run: 'mkdir -p c:\artifact'
       - run: 'echo hello > c:\artifact\helloworld.txt'
       - uses: actions/upload-artifact@v2 # calling the upload-artifact action (verified)
         with:
