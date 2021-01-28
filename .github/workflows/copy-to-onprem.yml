@@ -15,10 +15,11 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
-    - name: Setup .NET
-      uses: actions/setup-dotnet@v1
-      with:
-        dotnet-version: 5.0.x
+    # not needed if .NET is already installed on the runner
+    #- name: Setup .NET
+      #uses: actions/setup-dotnet@v1
+      #with:
+        #dotnet-version: 5.0.x
     - name: Restore dependencies
       run: dotnet restore
     - name: Build
