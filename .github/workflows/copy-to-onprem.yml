@@ -12,7 +12,8 @@ jobs:
   buildandcopy:
 
     runs-on: self-hosted
-
+    
+    # begin steps
     steps:
     - uses: actions/checkout@v2
     # not needed if .NET is already installed on the runner
