@@ -25,7 +25,7 @@ jobs:
       #run: dotnet restore
     - name: Build
       # commented out --no-restore, since I am not explicityly restoring above. doing it as part of the build.
-      run: dotnet build --configuration Release # .\dotnet-core-webapp
+      run: dotnet build --verbosity detailed # --configuration Release  .\dotnet-core-webapp
       # run: dotnet build #--no-restore
     - name: Test
       run: dotnet test --no-build --verbosity normal
