@@ -24,7 +24,8 @@ jobs:
     #- name: Restore dependencies
       #run: dotnet restore
     - name: Build
-      run: dotnet build --no-restore
+      # commented out --no-restore, since I am not explicityly restoring above. doing it as part of the build.
+      run: dotnet build #--no-restore
     - name: Test
       run: dotnet test --no-build --verbosity normal
       
